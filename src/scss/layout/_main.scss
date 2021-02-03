@@ -2,11 +2,16 @@
 $primary-color: #fcaf32;
 $secondary-color: #fc888e;
 
+a{
+  text-decoration: none;
+}
+
 html,
 body {
   font-family: 'Lato', sans-serif;
   margin: 0;
   padding: 0;
+  position: relative;
 }
 
 .main {
@@ -15,6 +20,12 @@ body {
   display: flex;
   justify-content: center;
   min-height: 100vh;
+}
+
+.message{
+  font-family: 'Lobster', cursive;
+  font-size: 42px;
+  display: none;
 }
 
 .btn-main {

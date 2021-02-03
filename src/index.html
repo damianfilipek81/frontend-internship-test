@@ -12,10 +12,20 @@
   <body>
     <section class="main">
       <button id="show-popup-form" class="btn btn-main">Click me!</button>
-      <!-- Display success message below -->
+      <h1 class="message">Thank you!</h1>
     </section>
     <div class="popup">
-      <!-- Here goes your popup form HTML code -->
+      <a href="#" class="btn-close"><i class="fas fa-times"></i></a>
+      <h3 class="popup__title">Login</h3>
+      <form class="popup__form">
+        <input type="text" class="email" placeholder="E-mail" >
+        <input type="password" class="password" placeholder="Password">
+        <label class="label"><input type="checkbox" class="checkbox"> I agree to terms & conditions.</label>
+        <input class="btn-submit" type="submit" value="SUBMIT">
+      </form>
+      <h5 class="invalid__email-message">Invalid e-mail.</h5>
+      <h5 class="invalid__password-message">Invalid password.</h5>
+      <h5 class="invalid__checkbox-message">You must accept terms & conditions.</h5>
     </div>
     <script src="js/index.min.js" charset="utf-8"></script>
   </body>

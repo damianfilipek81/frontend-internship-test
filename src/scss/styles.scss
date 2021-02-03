@@ -1,2 +1,132 @@
 // Here goes your CSS
-@import 'layout/main';
+@import "layout/main";
+
+$color-light: rgb(255, 255, 255);
+
+.popup {
+  //height: 320px;
+  width: 280px;
+  background: $color-light;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  display: none;
+  padding-bottom: 10px;
+
+  .btn-close {
+    background: black;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    position: absolute;
+    right: -5px;
+    top: -5px;
+
+    &:hover{
+      background: $secondary-color;
+    }
+
+    &:active i{
+      color: black;
+    }
+
+    i {
+      display: flex;
+      justify-content: center;
+      font-size: 20px;
+      line-height: 28px;
+      color: $color-light;
+    }
+  }
+
+  &__title{
+    text-align: center;
+    font-family: 'Lobster';
+    font-size: 30px;
+    margin-bottom: 0;
+  }
+
+  &__form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 30px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+
+    input{
+      padding: 12px 0;
+      width: 100%;
+      margin: 10px 0;
+      outline: none;
+      border: 1.5px solid black;
+    }
+
+    .checkbox{
+      width: 13px;
+      height: 13px;
+
+      &:checked{
+        background: black;
+      }
+    }
+
+    .btn-submit{
+      background: black;
+      color: $color-light;
+      cursor: pointer;
+      border: none;
+
+      &:hover {
+        background: $secondary-color;
+      }
+
+      &:active{
+        opacity: 0.8;
+      }
+    }
+  }
+
+  .invalid{
+    &__email-message{
+      display: none;
+      color: red;
+      text-align: center;
+      margin: 3px;
+    }
+
+    &__password-message{
+      display: none;
+      color: red;
+      text-align: center;
+      margin: 3px;
+    }
+
+    &__checkbox-message{
+      display: none;
+      color: red;
+      text-align: center;
+      margin: 3px;
+    }
+  }
+}
+
+.active{
+  display: block !important;
+}
+
+.not-active{
+  display: none;
+}
+
+.invalid{
+  border: 1.5px solid red !important;
+}
+
+.invalid-label{
+  color: red;
+}
